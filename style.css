@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1c2b39;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1c2b39;
+  font-size: 0.9rem;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #00a9b5;
+}
+
+/* HERO */
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  color: #4a5b6a;
+}
+
+.btn {
+  display: inline-block;
+  background: #00a9b5;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  background: #008e98;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* INFO SECTION */
+.info {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.info-text h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.info-text p {
+  font-size: 0.95rem;
+  color: #4a5b6a;
+  margin-bottom: 15px;
+}
+
+.link {
+  color: #00a9b5;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.info-img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+.footer {
+  background: #00a9b5;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero,
+  .info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
