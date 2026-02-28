@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>RT Soluciones Termomecánicas</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T&R Soluciones Termomecánicas</title>
+  <meta name="viewpoT&R" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Calidad termomecánica al alcance" />
 
   <link rel="stylesheet" href="styles.css">
@@ -13,13 +13,13 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo"><img src="assets/logo.webp" alt="Logo T&R Soluciones Termomecánicas">T&R Soluciones Termomecánicas</a>
+      <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Logo T&R Soluciones Termomecánicas">T&R Soluciones Termomecánicas</a>
       <ul class="nav-links">
-        <li><a href="#" class="active">Inicio</a></li>
-        <li><a href="#">Sobre nosotros</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Obras Ejecutadas</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="about.html">Sobre nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="obras.html">Obras Ejecutadas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
   </nav>
@@ -30,12 +30,12 @@
       <div class="hero-text">
         <h1>Calidad termomecánica<br>al alcance</h1>
         <p>
-          En RT Soluciones Termomecánicas nos especializamos en brindar
+          En T&R Soluciones Termomecánicas nos especializamos en brindar
           asesoramiento y servicios de instalaciones termomecánicas
           para optimizar el rendimiento y eficiencia de su negocio
           u organización en Buenos Aires.
         </p>
-        <a href="#" class="btn">Contacto</a>
+        <a href="contacto.html" class="btn">Contacto</a>
       </div>
 
       <div class="hero-img">
@@ -57,7 +57,7 @@
           Con años de experiencia, garantizamos un enfoque personalizado
           para cada uno de nuestros clientes.
         </p>
-        <a href="#" class="link">Sobre nosotros →</a>
+        <a href="about.html" class="link">Sobre nosotros →</a>
       </div>
     </section>
 
@@ -66,8 +66,8 @@
       <div class="container">
         <h2>Calidad y satisfacción garantizada</h2>
         <p>
-          En RT Soluciones Termomecánicas, nos enorgullece ofrecer servicios de alta calidad
-          que superan las expectativas de nuestros clientes. Nuestro equipo de expertos está
+          En T&R Soluciones Termomecánicas, nos enorgullece ofrecer servicios de alta calidad
+          que superan las expectativas de nuestros clientes. Nuestro equipo de expeT&Ros está
           comprometido con la excelencia en cada proyecto, garantizando resultados óptimos
           y duraderos. Utilizamos tecnología de última generación y seguimos los más altos
           estándares de la industria para asegurar la máxima eficiencia y confiabilidad.
@@ -75,29 +75,103 @@
       </div>
     </section>
 
-    <!-- SECCIÓN OBRAS -->
-    <section class="projects">
+    <!-- SECCIÓN OBRAS PARTICIPACIÓN -->
+    <section class="works-participation">
       <div class="container">
-        <h2>OBRAS EN LA QUE TUVIMOS PARTICIPACION</h2>
-        <div class="projects-content">
-          <div class="projects-list">
-            <h3>OBRAS HOSPITALARIAS</h3>
-            <ul>
-              <li>HOSPITAL CENTRAL DE SAN ISIDRO
-                <ul>
-                  <li>Instalación sistemas AA total</li>
-                </ul>
-              </li>
-              <li>HOSPITAL SANTA ROSA LA PAMPA</li>
-            </ul>
+        <h2>Obras en las que participamos</h2>
+        
+        <!-- CARRUSEL DE OBRAS -->
+        <div class="carousel-container">
+          <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">‹</button>
+            <div class="carousel-track">
+              <div class="work-item">
+                <div class="work-image">
+                  <img src="assets/work-telecom.webp" alt="Telecom">
+                </div>
+                <div class="work-content">
+                  <h3>TELECOM</h3>
+                  <p>Proyecto y Dirección de Obra de sistemas de climatización para infraestructura de telecomunicaciones.</p>
+                  <div class="participants">
+                    <span class="participant">INELCO SA.</span>
+                    <span class="participant">CLIMACON SRL</span>
+                    <span class="participant">T&R Soluciones</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="work-item">
+                <div class="work-image">
+                  <img src="assets/work-telefonica.webp" alt="Telefónica">
+                </div>
+                <div class="work-content">
+                  <h3>TELEFÓNICA</h3>
+                  <p>Proyecto y Dirección de Obra para centrales telefónicas y centros de datos.</p>
+                  <div class="participants">
+                    <span class="participant">INELCO SA.</span>
+                    <span class="participant">CLIMACON SRL</span>
+                    <span class="participant">T&R Soluciones</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="work-item">
+                <div class="work-image">
+                  <img src="assets/work-fate.webp" alt="Fate">
+                </div>
+                <div class="work-content">
+                  <h3>FATE</h3>
+                  <p>Proyecto y Dirección Laboratorio Prueba Neumáticos con control ambiental especializado.</p>
+                  <div class="participants">
+                    <span class="participant">INELCO SA.</span>
+                    <span class="participant">T&R Soluciones</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="work-item">
+                <div class="work-image">
+                  <img src="assets/work-hotel-abasto.webp" alt="Hotel Abasto">
+                </div>
+                <div class="work-content">
+                  <h3>HOTEL ABASTO</h3>
+                  <p>Proyecto de Aire Acondicionado completo para hotel de categoría superior.</p>
+                  <div class="participants">
+                    <span class="participant">Brignone</span>
+                    <span class="participant">T&R Soluciones</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="work-item">
+                <div class="work-image">
+                  <img src="assets/work-hospital-san-isidro.webp" alt="Hospital Central San Isidro">
+                </div>
+                <div class="work-content">
+                  <h3>HOSPITAL CENTRAL DE SAN ISIDRO</h3>
+                  <p>Dirección de Obra para sistema de climatización hospitalaria de alta complejidad.</p>
+                  <div class="participants">
+                    <span class="participant">INELCO SA</span>
+                    <span class="participant">T&R Soluciones</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-btn next-btn" onclick="moveCarousel(1)">›</button>
           </div>
-          <div class="testimonial-card">
-            <p>"Conocí a la empresa hace unos meses cuando necesité algunos productos y servicios. Me ha sorprendido la excelente calidad de sus trabajos y la atención individual que recibí. No dudaré en recomendarles a mis amigos."</p>
-            <h4>Diego Alonso</h4>
+          
+          <!-- INDICADORES -->
+          <div class="carousel-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+            <span class="indicator" onclick="goToSlide(3)"></span>
+            <span class="indicator" onclick="goToSlide(4)"></span>
           </div>
-          <div class="testimonial-card">
-            <p>"Conocí a la empresa hace unos meses cuando necesité algunos productos y servicios. Me ha sorprendido la excelente calidad de sus trabajos y la atención individual que recibí. No dudaré en recomendarles a mis amigos."</p>
-            <h4>Jorge Fernández</h4>
+          
+          <!-- BOTÓN VER MÁS -->
+          <div class="carousel-more">
+            <a href="obras.html" class="btn">Ver más obras</a>
           </div>
         </div>
       </div>
@@ -112,7 +186,7 @@
             <h3>R&T Soluciones Termomecánicas</h3>
             <p><strong>Dirección:</strong> Av. Principal 1234, Buenos Aires, Argentina</p>
             <p><strong>Teléfono:</strong> (+54) 347 055 1234</p>
-            <p><strong>Email:</strong> info@rtsoluciones.com.ar</p>
+            <p><strong>Email:</strong> info@T&Rsoluciones.com.ar</p>
             <div class="social-links">
               <a href="#">Facebook</a>
               <a href="#">LinkedIn</a>
@@ -134,8 +208,56 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2026 RT Soluciones Termomecánicas</p>
+    <p>© 2026 T&R Soluciones Termomecánicas</p>
   </footer>
+
+  <script>
+    let currentSlide = 0;
+    const totalSlides = 5;
+
+    function moveCarousel(direction) {
+      currentSlide += direction;
+      
+      if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+      } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+      }
+      
+      updateCarousel();
+    }
+
+    function goToSlide(slideIndex) {
+      currentSlide = slideIndex;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const track = document.querySelector('.carousel-track');
+      const translateValue = -currentSlide * 100;
+      track.style.transform = `translateX(${translateValue}%)`;
+      
+      // Actualizar indicadores
+      const indicators = document.querySelectorAll('.indicator');
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    // Auto-avanzar cada 5 segundos
+    setInterval(() => {
+      moveCarousel(1);
+    }, 5000);
+
+    // Navegación con teclado
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        moveCarousel(-1);
+      } else if (e.key === 'ArrowRight') {
+        moveCarousel(1);
+      }
+    });
+  </script>
 
 </body>
 </html>
