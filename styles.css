@@ -107,6 +107,10 @@ body {
 
 /* RESPONSIVE NAVBAR */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 2rem 0;
+  }
+  
   .nav-container {
     padding: 0 15px;
     justify-content: space-between;
@@ -143,6 +147,7 @@ body {
   }
   
   .nav-links {
+    display: none; /* Ocultar enlaces en mobile por defecto */
     position: fixed;
     top: 0;
     left: 0;
@@ -158,6 +163,7 @@ body {
   }
   
   .nav-links.active {
+    display: flex; /* Mostrar cuando está activo */
     transform: translateX(0);
   }
   
