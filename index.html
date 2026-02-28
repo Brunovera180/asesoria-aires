@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>T&R Soluciones Termomecánicas</title>
-  <meta name="viewpoT&R" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Calidad termomecánica al alcance" />
 
   <link rel="stylesheet" href="styles.css">
@@ -13,8 +13,10 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
+      <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+      <button class="mobile-close-btn" onclick="toggleMenu()">✕</button>
       <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Logo T&R Soluciones Termomecánicas">T&R Soluciones Termomecánicas</a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="about.html">Sobre nosotros</a></li>
         <li><a href="servicios.html">Servicios</a></li>
@@ -67,7 +69,7 @@
         <h2>Calidad y satisfacción garantizada</h2>
         <p>
           En T&R Soluciones Termomecánicas, nos enorgullece ofrecer servicios de alta calidad
-          que superan las expectativas de nuestros clientes. Nuestro equipo de expeT&Ros está
+          que superan las expectativas de nuestros clientes. Nuestro equipo de expertos está
           comprometido con la excelencia en cada proyecto, garantizando resultados óptimos
           y duraderos. Utilizamos tecnología de última generación y seguimos los más altos
           estándares de la industria para asegurar la máxima eficiencia y confiabilidad.
@@ -262,6 +264,32 @@
       if (e.target === this) {
         closePopup();
       }
+    });
+
+    // Menú móvil
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const closeBtn = document.querySelector('.mobile-close-btn');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      
+      navLinks.classList.toggle('active');
+      
+      if (navLinks.classList.contains('active')) {
+        closeBtn.style.setProperty('display', 'block', 'important');
+        menuBtn.style.setProperty('display', 'none', 'important');
+      } else {
+        closeBtn.style.setProperty('display', 'none', 'important');
+        menuBtn.style.setProperty('display', 'block', 'important');
+      }
+    }
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+        document.querySelector('.mobile-close-btn').style.setProperty('display', 'none', 'important');
+        document.querySelector('.mobile-menu-btn').style.setProperty('display', 'block', 'important');
+      });
     });
   </script>
 

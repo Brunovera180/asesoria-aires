@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Obras Ejecutadas - T&R Soluciones Termomecánicas</title>
-  <meta name="viewpoT&R" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Nuestras obras y proyectos realizados" />
 
   <link rel="stylesheet" href="styles.css">
@@ -13,8 +13,10 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
+      <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+      <button class="mobile-close-btn" onclick="toggleMenu()">✕</button>
       <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Logo T&R Soluciones Termomecánicas">T&R Soluciones Termomecánicas</a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="about.html">Sobre nosotros</a></li>
         <li><a href="servicios.html">Servicios</a></li>
@@ -30,8 +32,8 @@
       <div class="hero-text">
         <h1>Obras Ejecutadas</h1>
         <p>
-          Conoce algunos de los proyectos más impoT&Rantes en los que
-          hemos paT&Ricipado, demostrando nuestra experiencia y compromiso.
+          Conoce algunos de los proyectos más importantes en los que
+          hemos participado, demostrando nuestra experiencia y compromiso.
         </p>
         <a href="contacto.html" class="btn">Consultar por su proyecto</a>
       </div>
@@ -180,10 +182,36 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2026 T&R Soluciones Termomecánicas</p>
+    <p> 2026 T&R Soluciones Termomecánicas</p>
   </footer>
 
   <script>
+    // Menú móvil
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const closeBtn = document.querySelector('.mobile-close-btn');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      
+      navLinks.classList.toggle('active');
+      
+      if (navLinks.classList.contains('active')) {
+        closeBtn.style.setProperty('display', 'block', 'important');
+        menuBtn.style.setProperty('display', 'none', 'important');
+      } else {
+        closeBtn.style.setProperty('display', 'none', 'important');
+        menuBtn.style.setProperty('display', 'block', 'important');
+      }
+    }
+
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('active');
+        document.querySelector('.mobile-close-btn').style.setProperty('display', 'none', 'important');
+        document.querySelector('.mobile-menu-btn').style.setProperty('display', 'block', 'important');
+      });
+    });
+
     let currentSlide = 0;
     const totalSlides = 11;
 
