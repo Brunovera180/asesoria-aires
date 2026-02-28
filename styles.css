@@ -345,8 +345,129 @@ body {
   border-color: #061f31;
 }
 
+/* ESTILOS FORMULARIO BREVO */
+.brevo-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.brevo-form input,
+.brevo-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: white;
+  box-sizing: border-box;
+}
+
+.brevo-form input:focus,
+.brevo-form textarea:focus {
+  outline: none;
+  border-color: #061f31;
+}
+
+.brevo-form button {
+  width: 100%;
+  background: #061f31;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.brevo-form button:hover {
+  background: #041529;
+  transform: translateY(-2px);
+}
+
 .contact-form button {
   align-self: flex-start;
+}
+
+/* ESTILOS POPUP DE ÉXITO */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.popup-content {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: popupSlide 0.3s ease-out;
+}
+
+.popup-icon {
+  width: 60px;
+  height: 60px;
+  background: #28a745;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.popup-content h3 {
+  color: #061f31;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.popup-content p {
+  color: #4a5b6a;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.popup-btn {
+  background: #061f31;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.popup-btn:hover {
+  background: #041529;
+  transform: translateY(-2px);
+}
+
+@keyframes popupSlide {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* SECCIÓN MAPA */

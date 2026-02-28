@@ -44,48 +44,40 @@
         <div class="contact-content">
           <div class="contact-info">
             <h3>T&R Soluciones Termomecánicas</h3>
-            <p><strong>Dirección:</strong> Av. Principal 1234, Buenos Aires, Argentina</p>
-            <p><strong>Teléfono:</strong> (+54) 347 055 1234</p>
-            <p><strong>Email:</strong> info@T&Rsoluciones.com.ar</p>
+            <!-- <p><strong>Dirección:</strong> Av. Principal 1234, Buenos Aires, Argentina</p> -->
+            <p><strong>Teléfono:</strong> (+54) 9 11 6686 0456</p>
+            <p><strong>Email:</strong> ingenieria.gtorres@gmail.com</p>
             <p><strong>Horario:</strong> Lunes a Viernes 8:00 - 18:00 hs</p>
-            <div class="social-links">
+            <!-- <div class="social-links">
               <a href="#">Facebook</a>
               <a href="#">LinkedIn</a>
               <a href="#">Instagram</a>
-            </div>
+            </div> -->
           </div>
           <div class="contact-form">
             <h3>Envíenos su consulta</h3>
-            <form>
-              <div class="form-group">
-                <input type="text" placeholder="Nombre completo" required>
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Email" required>
-              </div>
-              <div class="form-group">
-                <input type="tel" placeholder="Teléfono">
-              </div>
-              <div class="form-group">
-                <select required>
-                  <option value="">Seleccione un servicio</option>
-                  <option value="aire">Aire Acondicionado</option>
-                  <option value="calefaccion">Calefacción</option>
-                  <option value="ventilacion">Ventilación</option>
-                  <option value="refrigeracion">Refrigeración</option>
-                  <option value="asesoramiento">Asesoramiento</option>
-                  <option value="mantenimiento">Mantenimiento</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Mensaje" rows="5" required></textarea>
-              </div>
+            <!-- Formulario Formspree -->
+            <form action="https://formspree.io/f/mojnbpzy" method="POST" class="brevo-form" id="contactForm">
+              <input type="text" name="name" placeholder="Nombre" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="tel" name="phone" placeholder="Teléfono (opcional)">
+              <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
               <button type="submit" class="btn">Enviar mensaje</button>
             </form>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- POPUP DE ÉXITO -->
+    <div id="successPopup" class="popup-overlay">
+      <div class="popup-content">
+        <div class="popup-icon">✓</div>
+        <h3>¡Mensaje enviado!</h3>
+        <p>Nos pondremos en contacto con usted a la brevedad.</p>
+        <button class="popup-btn" onclick="closePopup()">Cerrar</button>
+      </div>
+    </div>
 
     <!-- SECCIÓN MAPA -->
     <!-- <section class="map-section">
@@ -109,6 +101,38 @@
   <footer class="footer">
     <p>© 2026 T&R Soluciones Termomecánicas</p>
   </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Mostrar popup de éxito
+      document.getElementById('successPopup').style.display = 'flex';
+      
+      // Resetear formulario
+      this.reset();
+      
+      // Enviar formulario a Formspree
+      fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+    });
+
+    function closePopup() {
+      document.getElementById('successPopup').style.display = 'none';
+    }
+
+    // Cerrar popup al hacer clic fuera
+    document.getElementById('successPopup').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closePopup();
+      }
+    });
+  </script>
 
 </body>
 </html>
